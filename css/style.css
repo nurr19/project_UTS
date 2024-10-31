@@ -1,0 +1,384 @@
+:root {
+    --primary: #a9a9a9;
+    --bg: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Roboto+Condensed", sans-serif;
+    background-color: var(--bg);
+    color: #000000;
+}
+
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #fff;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a ::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+
+/* hero section */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("../IMG/colonial-style-building.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 0deg, rgba(1, 1, 5, 1) 3%, rgba(225, 225, 225, 0) 25%);
+}
+
+.hero .content {
+    max-width: 800px;
+    padding: 1.4rem 7%;
+    position: absolute;
+}
+
+.hero .content h1 {
+    font-size: 40px;
+    /* Ukuran font untuk h1 */
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-weight: bolder;
+    /* Mengatur jarak antar baris */
+}
+
+.hero .content h1 span {
+    color: grey;
+    font-weight: bolder;
+    /* Warna untuk kata "Kopi" */
+}
+
+.hero .content p {
+    font-size: 18px;
+    /* Ukuran font untuk paragraf */
+    margin-bottom: 20px;
+}
+
+.cta {
+    display: inline-block;
+    background-color: #ffcc00;
+    /* Warna latar belakang tombol */
+    color: #333;
+    /* Warna teks tombol */
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bolder;
+    transition: background-color 0.3s ease;
+    /* Transisi untuk efek hover */
+}
+
+.cta:hover {
+    background-color: #ffd633;
+    /* Warna latar belakang tombol saat hover */
+}
+
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .hero {
+        height: 400px;
+        /* Mengurangi tinggi untuk layar kecil */
+    }
+    .content h1 {
+        font-size: 28px;
+        /* Ukuran font untuk h1 di layar kecil */
+    }
+    .content p {
+        font-size: 16px;
+        /* Ukuran font untuk paragraf di layar kecil */
+    }
+    .cta {
+        padding: 10px 20px;
+        /* Ukuran padding tombol di layar kecil */
+        font-size: 14px;
+        /* Ukuran font tombol di layar kecil */
+    }
+}
+
+
+/* about section */
+
+.Profil,
+.Layanan {
+    padding: 10rem 7% 1.4rem;
+    color: #fff;
+}
+
+.Profil h2,
+.Layanan h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.Profil .row {
+    display: flex;
+}
+
+.Profil .row .content h3 {
+    font-size: 1, 8rem;
+    padding: 1rem;
+}
+
+.Profil .row .content p {
+    margin-bottom: 0, 8rem;
+    font-size: 1, 4rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+.Layanan p {
+    text-align: center;
+    max-width: 70rem;
+    font-size: 1.8rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+.Galeri {
+    padding: 10rem 7% 1.4rem;
+    color: #fff;
+    text-align: center;
+}
+
+.Galeri h9 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.card {
+    background-color: white;
+    /* Warna latar belakang kartu */
+    border-radius: 8px;
+    /* Sudut melengkung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Bayangan */
+    text-align: center;
+    /* Menyelaraskan teks ke tengah */
+    padding: 10px;
+    /* Padding dalam kartu */
+    width: 220px;
+    /* Lebar kartu */
+    margin-top: 3rem;
+    margin-right: 2rem;
+}
+
+.foto-wrapper {
+    display: flex;
+}
+
+
+/* Image Styles */
+
+.card img {
+    width: 100%;
+    /* Gambar memenuhi lebar kartu */
+    height: auto;
+    /* Mempertahankan rasio aspek gambar */
+    border-radius: 8px;
+    /* Sudut melengkung untuk gambar */
+}
+
+
+/* Title Styles */
+
+.Galeri-card-tittle {
+    margin: 10px 0;
+    /* Jarak atas dan bawah untuk judul */
+    font-size: 18px;
+    /* Ukuran font untuk judul */
+}
+
+
+/* Price Styles */
+
+.card p {
+    font-size: 16px;
+    /* Ukuran font untuk harga */
+    color: #2c3e50;
+    /* Warna untuk harga */
+}
+
+.contact {
+    padding: 10rem 7% 1.4rem;
+    color: #fff;
+    text-align: center;
+}
+
+.contact h8 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.contact p {
+    margin-top: 2rem;
+}
+
+.contact .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: #333;
+    flex-wrap: wrap;
+}
+
+.contact .row .maps {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: var(--bg);
+    border: 1px solid #eee;
+    padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1, 7rem;
+    background: none;
+    color: #fff;
+}
+
+.contact .row form .btn {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: var(--primary);
+    cursor: pointer;
+}
+
+
+/* laptop */
+
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+
+/* tablet */
+
+@media (max-width: 768px) {
+    html {
+        font-size: 60%;
+    }
+    #hamburger-menu {
+        display: inline-block;
+    }
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 25rem;
+        height: 100vh;
+    }
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+}
+
+
+/* handphone */
